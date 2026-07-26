@@ -17,4 +17,4 @@ flowchart LR
     C --> E["qBittorrent Web API"]
 ```
 
-On both platforms, the registered `magnet:` scheme opens the native app. The shared client reads the build-time server endpoint, submits the link, and checks connection status. The app displays the result and opens the server after a successful add.
+On both platforms, the registered `magnet:` scheme opens the native app. The shared client reads the build-time server endpoint, submits the link, and checks connection status. The app displays the result and opens the server after a successful add. The macOS host then quits automatically.

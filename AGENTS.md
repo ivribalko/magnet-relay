@@ -11,7 +11,7 @@ Magnet Relay sends magnet links from Safari to qBittorrent on a local server.
 
 ## Behavior
 
-Safari opens the native app for magnet links on iOS and macOS. The app adds the torrent, displays the result, and opens the server after success. It also shows connection details and provides Refresh and Open controls.
+Safari opens the native app for magnet links on iOS and macOS. The app adds the torrent, displays the result, and opens the server after success. On macOS, it then quits automatically. It also shows connection details and provides Refresh and Open controls.
 
 ## Security
 

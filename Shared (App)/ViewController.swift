@@ -147,8 +147,13 @@ class ViewController: PlatformViewController, WKNavigationDelegate, WKScriptMess
                         message: "Added magnet link to qBittorrent.",
                         state: "success"
                     )
+#if os(iOS)
                     self.refreshConnectionStatus()
+#endif
                     self.openServer()
+#if os(macOS)
+                    NSApp.terminate(nil)
+#endif
                 case let .failure(error):
                     self.showOperationStatus(
                         message: self.message(for: error),
