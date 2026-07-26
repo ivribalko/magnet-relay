@@ -9,10 +9,6 @@ Magnet Relay sends magnet links from Safari to qBittorrent on a local server.
 - Run the macOS or iOS target.
 - Use the native app to test the qBittorrent connection.
 
-For iOS, select the `Magnet Relay (iOS)` scheme and a connected device. Run the app, allow Local Network access, then open a magnet link in Safari. Personal Team builds expire after seven days.
-
-If the Local Network prompt is delayed, reopen Magnet Relay, tap Refresh, approve Local Network access, and restart Safari.
-
 ## Behavior
 
 Safari opens the native app for magnet links on iOS and macOS. The app adds the torrent, displays the result, and opens the server after success. It also shows connection details and provides Refresh and Open controls.
