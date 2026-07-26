@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="../Style.css">
+    <script src="../Script.js" defer></script>
+</head>
+<body>
+    <main class="app-shell">
+        <img src="../Icon.png" width="112" height="112" alt="Magnet Relay Icon">
+
+        <div class="guidance">
+            <p>Open a magnet link in Safari to send it directly to this app.</p>
+            <p class="behavior">Magnet Relay adds the link to qBittorrent and opens the server after success.</p>
+        </div>
+
+        <section class="diagnostics" aria-label="Connection status">
+            <dl>
+                <div>
+                    <dt>LAN Permission</dt>
+                    <dd id="lan-permission" data-state="checking">Checking…</dd>
+                </div>
+                <div>
+                    <dt>Server Address</dt>
+                    <dd id="server-address" class="endpoint-value">Loading…</dd>
+                </div>
+                <div>
+                    <dt>Server Port</dt>
+                    <dd id="server-port" class="endpoint-value">Loading…</dd>
+                </div>
+                <div>
+                    <dt>Server Version</dt>
+                    <dd id="server-version" data-state="checking">Checking…</dd>
+                </div>
+            </dl>
+        </section>
+
+        <p id="status" role="status" aria-live="polite"></p>
+        <p id="operation-status" role="status" aria-live="polite"></p>
+
+        <div class="actions">
+            <button id="refresh-button" type="button">Refresh</button>
+            <button id="open-button" type="button" disabled>Open</button>
+        </div>
+    </main>
+</body>
+</html>

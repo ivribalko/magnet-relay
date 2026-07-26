@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>CFBundleURLName</key>
+			<string>$(MAGNET_RELAY_APP_BUNDLE_IDENTIFIER).magnet</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>magnet</string>
+			</array>
+		</dict>
+	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Magnet Relay connects to qBittorrent on your local media server.</string>
+	<key>MagnetRelayServerHost</key>
+	<string>$(MAGNET_RELAY_SERVER_HOST)</string>
+	<key>MagnetRelayServerPort</key>
+	<string>$(MAGNET_RELAY_SERVER_PORT)</string>
+	<key>MagnetRelayServerScheme</key>
+	<string>$(MAGNET_RELAY_SERVER_SCHEME)</string>
+</dict>
+</plist>

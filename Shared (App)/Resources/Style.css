@@ -1,0 +1,180 @@
+* {
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    cursor: default;
+}
+
+:root {
+    color-scheme: light dark;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-height: 100%;
+    margin: 0;
+    padding: 24px;
+    color: CanvasText;
+    text-align: center;
+}
+
+.app-shell {
+    box-sizing: border-box;
+    width: min(100%, 420px);
+}
+
+.guidance {
+    min-height: 42px;
+    margin: 14px 0 18px;
+}
+
+.guidance p {
+    margin: 0;
+    color: rgba(128, 128, 128, 0.95);
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.guidance .behavior {
+    margin-top: 8px;
+}
+
+.diagnostics {
+    overflow: hidden;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    border-radius: 12px;
+    background: rgba(128, 128, 128, 0.08);
+    text-align: left;
+}
+
+dl {
+    margin: 0;
+}
+
+dl > div {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+}
+
+dl > div + div {
+    border-top: 1px solid rgba(128, 128, 128, 0.18);
+}
+
+dt {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+    font-size: 13px;
+    text-align: right;
+}
+
+dd[data-state]::before {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 6px;
+    border-radius: 50%;
+    background: rgba(128, 128, 128, 0.7);
+    content: "";
+}
+
+dd[data-state="success"]::before {
+    background: #30a46c;
+}
+
+dd[data-state="warning"]::before {
+    background: #d99a20;
+}
+
+dd[data-state="error"]::before {
+    background: #e5484d;
+}
+
+.endpoint-value {
+    color: rgba(128, 128, 128, 0.95);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12px;
+}
+
+#status,
+#operation-status {
+    min-height: 19px;
+    margin: 12px 0 0;
+    color: rgba(128, 128, 128, 0.95);
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+#operation-status {
+    margin-top: 4px;
+}
+
+#operation-status:empty {
+    display: none;
+}
+
+#status[data-state="error"],
+#operation-status[data-state="error"] {
+    color: #e5484d;
+}
+
+#status[data-state="success"],
+#operation-status[data-state="success"] {
+    color: #30a46c;
+}
+
+.actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 9px;
+    padding: 9px 14px;
+    background: rgba(128, 128, 128, 0.18);
+    color: CanvasText;
+    font: inherit;
+    font-weight: 600;
+}
+
+button:disabled {
+    opacity: 0.5;
+}
+
+@media (max-height: 620px) {
+    body {
+        padding: 14px 20px;
+    }
+
+    img {
+        width: 84px;
+        height: 84px;
+    }
+
+    .guidance {
+        min-height: 36px;
+        margin: 8px 0 12px;
+    }
+
+    dl > div {
+        padding: 9px 12px;
+    }
+}

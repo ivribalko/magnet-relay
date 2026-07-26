@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		081333993015952500B1C272 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081333983015952500B1C272 /* AppDelegate.swift */; };
+		0813339B3015952500B1C272 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0813339A3015952500B1C272 /* SceneDelegate.swift */; };
+		0813339E3015952500B1C272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0813339C3015952500B1C272 /* LaunchScreen.storyboard */; };
+		081333A13015952500B1C272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0813339F3015952500B1C272 /* Main.storyboard */; };
+		081333AA3015952500B1C272 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081333A93015952500B1C272 /* AppDelegate.swift */; };
+		081333AD3015952500B1C272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 081333AB3015952500B1C272 /* Main.storyboard */; };
+		081333C33015952500B1C272 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 081333883015952500B1C272 /* Main.html */; };
+		081333C43015952500B1C272 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 081333883015952500B1C272 /* Main.html */; };
+		081333C53015952500B1C272 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0813338A3015952500B1C272 /* Icon.png */; };
+		081333C63015952500B1C272 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0813338A3015952500B1C272 /* Icon.png */; };
+		081333C73015952500B1C272 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 0813338B3015952500B1C272 /* Style.css */; };
+		081333C83015952500B1C272 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 0813338B3015952500B1C272 /* Style.css */; };
+		081333C93015952500B1C272 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 0813338C3015952500B1C272 /* Script.js */; };
+		081333CA3015952500B1C272 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 0813338C3015952500B1C272 /* Script.js */; };
+		081333CB3015952500B1C272 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0813338D3015952500B1C272 /* ViewController.swift */; };
+		081333CC3015952500B1C272 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0813338D3015952500B1C272 /* ViewController.swift */; };
+		081333CD3015952500B1C272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0813338E3015952500B1C272 /* Assets.xcassets */; };
+		081333CE3015952500B1C272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0813338E3015952500B1C272 /* Assets.xcassets */; };
+		A10C0F1A0000000000000011 /* QBittorrentClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C0F1A0000000000000010 /* QBittorrentClient.swift */; };
+		A10C0F1A0000000000000012 /* QBittorrentClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C0F1A0000000000000010 /* QBittorrentClient.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		081333893015952500B1C272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		0813338A3015952500B1C272 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		0813338B3015952500B1C272 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		0813338C3015952500B1C272 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		0813338D3015952500B1C272 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0813338E3015952500B1C272 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		081333953015952500B1C272 /* Magnet Relay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magnet Relay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		081333983015952500B1C272 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0813339A3015952500B1C272 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0813339D3015952500B1C272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		081333A03015952500B1C272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		081333A23015952500B1C272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		081333A73015952500B1C272 /* Magnet Relay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magnet Relay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		081333A93015952500B1C272 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		081333AC3015952500B1C272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		081333AE3015952500B1C272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A10C0F1A0000000000000001 /* local.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = local.xcconfig; sourceTree = "<group>"; };
+		A10C0F1A0000000000000010 /* QBittorrentClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QBittorrentClient.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		081333923015952500B1C272 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		081333A43015952500B1C272 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		081333813015952500B1C272 = {
+			isa = PBXGroup;
+			children = (
+				A10C0F1A0000000000000001 /* local.xcconfig */,
+				081333863015952500B1C272 /* Shared (App) */,
+				081333973015952500B1C272 /* iOS (App) */,
+				081333A83015952500B1C272 /* macOS (App) */,
+				081333963015952500B1C272 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		081333863015952500B1C272 /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				A10C0F1A0000000000000010 /* QBittorrentClient.swift */,
+				0813338D3015952500B1C272 /* ViewController.swift */,
+				0813338E3015952500B1C272 /* Assets.xcassets */,
+				081333873015952500B1C272 /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		081333873015952500B1C272 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				081333883015952500B1C272 /* Main.html */,
+				0813338A3015952500B1C272 /* Icon.png */,
+				0813338B3015952500B1C272 /* Style.css */,
+				0813338C3015952500B1C272 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		081333963015952500B1C272 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				081333953015952500B1C272 /* Magnet Relay.app */,
+				081333A73015952500B1C272 /* Magnet Relay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		081333973015952500B1C272 /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				081333983015952500B1C272 /* AppDelegate.swift */,
+				0813339A3015952500B1C272 /* SceneDelegate.swift */,
+				0813339C3015952500B1C272 /* LaunchScreen.storyboard */,
+				0813339F3015952500B1C272 /* Main.storyboard */,
+				081333A23015952500B1C272 /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		081333A83015952500B1C272 /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				081333A93015952500B1C272 /* AppDelegate.swift */,
+				081333AB3015952500B1C272 /* Main.storyboard */,
+				081333AE3015952500B1C272 /* Info.plist */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		081333943015952500B1C272 /* Magnet Relay (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 081333D73015952500B1C272 /* Build configuration list for PBXNativeTarget "Magnet Relay (iOS)" */;
+			buildPhases = (
+				081333913015952500B1C272 /* Sources */,
+				081333923015952500B1C272 /* Frameworks */,
+				081333933015952500B1C272 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Magnet Relay (iOS)";
+			packageProductDependencies = (
+			);
+			productName = "Magnet Relay (iOS)";
+			productReference = 081333953015952500B1C272 /* Magnet Relay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		081333A63015952500B1C272 /* Magnet Relay (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 081333DE3015952500B1C272 /* Build configuration list for PBXNativeTarget "Magnet Relay (macOS)" */;
+			buildPhases = (
+				081333A33015952500B1C272 /* Sources */,
+				081333A43015952500B1C272 /* Frameworks */,
+				081333A53015952500B1C272 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Magnet Relay (macOS)";
+			packageProductDependencies = (
+			);
+			productName = "Magnet Relay (macOS)";
+			productReference = 081333A73015952500B1C272 /* Magnet Relay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		081333823015952500B1C272 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					081333943015952500B1C272 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					081333A63015952500B1C272 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+				};
+			};
+			buildConfigurationList = 081333853015952500B1C272 /* Build configuration list for PBXProject "Magnet Relay" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 081333813015952500B1C272;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 081333963015952500B1C272 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				081333943015952500B1C272 /* Magnet Relay (iOS) */,
+				081333A63015952500B1C272 /* Magnet Relay (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		081333933015952500B1C272 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				081333C53015952500B1C272 /* Icon.png in Resources */,
+				0813339E3015952500B1C272 /* LaunchScreen.storyboard in Resources */,
+				081333C33015952500B1C272 /* Main.html in Resources */,
+				081333C93015952500B1C272 /* Script.js in Resources */,
+				081333CD3015952500B1C272 /* Assets.xcassets in Resources */,
+				081333A13015952500B1C272 /* Main.storyboard in Resources */,
+				081333C73015952500B1C272 /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		081333A53015952500B1C272 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				081333C63015952500B1C272 /* Icon.png in Resources */,
+				081333C83015952500B1C272 /* Style.css in Resources */,
+				081333AD3015952500B1C272 /* Main.storyboard in Resources */,
+				081333CA3015952500B1C272 /* Script.js in Resources */,
+				081333CE3015952500B1C272 /* Assets.xcassets in Resources */,
+				081333C43015952500B1C272 /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		081333913015952500B1C272 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10C0F1A0000000000000011 /* QBittorrentClient.swift in Sources */,
+				081333CB3015952500B1C272 /* ViewController.swift in Sources */,
+				081333993015952500B1C272 /* AppDelegate.swift in Sources */,
+				0813339B3015952500B1C272 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		081333A33015952500B1C272 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10C0F1A0000000000000012 /* QBittorrentClient.swift in Sources */,
+				081333CC3015952500B1C272 /* ViewController.swift in Sources */,
+				081333AA3015952500B1C272 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		081333883015952500B1C272 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				081333893015952500B1C272 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		0813339C3015952500B1C272 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0813339D3015952500B1C272 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0813339F3015952500B1C272 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				081333A03015952500B1C272 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		081333AB3015952500B1C272 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				081333AC3015952500B1C272 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		081333D13015952500B1C272 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		081333D23015952500B1C272 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		081333D83015952500B1C272 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A10C0F1A0000000000000001 /* local.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "$(MAGNET_RELAY_DEVELOPMENT_TEAM)";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Magnet Relay";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(MAGNET_RELAY_APP_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "Magnet Relay";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		081333D93015952500B1C272 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A10C0F1A0000000000000001 /* local.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "$(MAGNET_RELAY_DEVELOPMENT_TEAM)";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Magnet Relay";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(MAGNET_RELAY_APP_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "Magnet Relay";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		081333DF3015952500B1C272 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A10C0F1A0000000000000001 /* local.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "$(MAGNET_RELAY_DEVELOPMENT_TEAM)";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Magnet Relay";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(MAGNET_RELAY_APP_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "Magnet Relay";
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		081333E03015952500B1C272 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A10C0F1A0000000000000001 /* local.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "$(MAGNET_RELAY_DEVELOPMENT_TEAM)";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Magnet Relay";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(MAGNET_RELAY_APP_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "Magnet Relay";
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		081333853015952500B1C272 /* Build configuration list for PBXProject "Magnet Relay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				081333D13015952500B1C272 /* Debug */,
+				081333D23015952500B1C272 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		081333D73015952500B1C272 /* Build configuration list for PBXNativeTarget "Magnet Relay (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				081333D83015952500B1C272 /* Debug */,
+				081333D93015952500B1C272 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		081333DE3015952500B1C272 /* Build configuration list for PBXNativeTarget "Magnet Relay (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				081333DF3015952500B1C272 /* Debug */,
+				081333E03015952500B1C272 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 081333823015952500B1C272 /* Project object */;
+}
