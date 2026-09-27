@@ -22,6 +22,10 @@
 	</dict>
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>Magnet Relay connects to qBittorrent on your local media server.</string>
+	<key>MagnetRelayAPIKey</key>
+	<string>$(MAGNET_RELAY_API_KEY)</string>
+	<key>MagnetRelayAPIKeyHost</key>
+	<string>$(MAGNET_RELAY_API_KEY_HOST)</string>
 	<key>MagnetRelayServerHost</key>
 	<string>$(MAGNET_RELAY_SERVER_HOST)</string>
 	<key>MagnetRelayServerPort</key>

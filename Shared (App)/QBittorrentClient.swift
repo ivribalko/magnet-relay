@@ -10,6 +10,7 @@ struct ServerConfiguration {
     let baseURL: URL
     let address: String
     let port: String
+    let apiKey: String?
 
     static var savedAddress: String {
         get { UserDefaults.standard.string(forKey: "serverAddress") ?? "192.168.1." }
@@ -44,6 +45,17 @@ struct ServerConfiguration {
         baseURL = url
         address = host
         port = portValue
+        let configuredKey = bundle.object(forInfoDictionaryKey: "MagnetRelayAPIKey") as? String
+        let keyHost = bundle.object(forInfoDictionaryKey: "MagnetRelayAPIKeyHost") as? String
+        // Keep the credential bound to its server when the address is edited.
+        if keyHost?.lowercased() == host.lowercased(),
+           let configuredKey, configuredKey.hasPrefix("qbt_"),
+           configuredKey.count == 32,
+           configuredKey.dropFirst(4).allSatisfy({ $0.isASCII && ($0.isLetter || $0.isNumber) }) {
+            apiKey = configuredKey
+        } else {
+            apiKey = nil
+        }
     }
 
     /// Builds an API URL while preserving any configured base path.
@@ -73,6 +85,19 @@ enum QBittorrentClientError: LocalizedError {
     }
 }
 
+/// Prevents authenticated requests from following redirects to another endpoint.
+private final class ServerRedirectPolicy: NSObject, URLSessionTaskDelegate {
+    func urlSession(
+        _ session: URLSession,
+        task: URLSessionTask,
+        willPerformHTTPRedirection response: HTTPURLResponse,
+        newRequest request: URLRequest,
+        completionHandler: @escaping (URLRequest?) -> Void
+    ) {
+        completionHandler(nil)
+    }
+}
+
 /// Performs isolated qBittorrent status and torrent-add requests.
 final class QBittorrentClient {
     let configuration: ServerConfiguration
@@ -86,7 +111,7 @@ final class QBittorrentClient {
         sessionConfiguration.timeoutIntervalForRequest = 12
         sessionConfiguration.timeoutIntervalForResource = 20
         sessionConfiguration.httpCookieAcceptPolicy = .always
-        session = URLSession(configuration: sessionConfiguration)
+        session = URLSession(configuration: sessionConfiguration, delegate: ServerRedirectPolicy(), delegateQueue: nil)
     }
 
     /// Reads the qBittorrent version as a non-mutating connection test.
@@ -137,6 +162,10 @@ final class QBittorrentClient {
         _ request: URLRequest,
         completion: @escaping (Result<Data, Error>) -> Void
     ) -> URLSessionDataTask {
+        var request = request
+        if let apiKey = configuration.apiKey {
+            request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
+        }
         let task = session.dataTask(with: request) { data, response, error in
             if let error {
                 completion(.failure(error))

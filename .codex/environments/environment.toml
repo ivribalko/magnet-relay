@@ -1,0 +1,10 @@
+version = 1
+name = "magnet-relay"
+
+[setup]
+script = ""
+
+[[actions]]
+name = "Run"
+icon = "run"
+command = "python3 scripts/run.py"
