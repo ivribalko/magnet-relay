@@ -178,3 +178,17 @@ button:disabled {
         padding: 9px 12px;
     }
 }
+
+input.endpoint-value {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    padding: 6px 8px;
+    border: 1px solid rgba(128, 128, 128, 0.35);
+    border-radius: 6px;
+    background: Canvas;
+    color: CanvasText;
+    text-align: right;
+    -webkit-user-select: text;
+    cursor: text;
+}

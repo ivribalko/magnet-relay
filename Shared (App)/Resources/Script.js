@@ -19,7 +19,6 @@ function showConnectionStatus(status) {
         status.lanPermission,
         status.lanState
     );
-    document.getElementById("server-address").textContent = status.serverAddress;
     document.getElementById("server-port").textContent = status.serverPort;
     setDiagnostic(
         document.getElementById("server-version"),
@@ -55,4 +54,19 @@ document.getElementById("refresh-button").addEventListener("click", () => {
 
 document.getElementById("open-button").addEventListener("click", () => {
     postNativeMessage("open-server");
+});
+
+/** Restores the locally saved server address when the page loads. */
+function setServerAddress(address) {
+    document.getElementById("server-address").value = address;
+}
+
+const serverAddress = document.getElementById("server-address");
+serverAddress.addEventListener("change", () => {
+    postNativeMessage({ action: "save-server-address", address: serverAddress.value });
+});
+serverAddress.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        serverAddress.blur();
+    }
 });

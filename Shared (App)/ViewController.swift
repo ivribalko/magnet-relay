@@ -56,6 +56,10 @@ class ViewController: PlatformViewController, WKNavigationDelegate, WKScriptMess
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         pageLoaded = true
+        if let data = try? JSONSerialization.data(withJSONObject: [ServerConfiguration.savedAddress]),
+           let json = String(data: data, encoding: .utf8) {
+            webView.evaluateJavaScript("setServerAddress(\(json)[0])")
+        }
 
 #if os(iOS)
         let applicationIsActive = UIApplication.shared.applicationState == .active
@@ -75,6 +79,14 @@ class ViewController: PlatformViewController, WKNavigationDelegate, WKScriptMess
         _ userContentController: WKUserContentController,
         didReceive message: WKScriptMessage
     ) {
+        if let payload = message.body as? [String: String],
+           payload["action"] == "save-server-address",
+           let address = payload["address"] {
+            ServerConfiguration.savedAddress = address.trimmingCharacters(in: .whitespacesAndNewlines)
+            refreshConnectionStatus()
+            return
+        }
+
         guard let action = message.body as? String else {
             return
         }
@@ -121,7 +133,7 @@ class ViewController: PlatformViewController, WKNavigationDelegate, WKScriptMess
         guard let configuration = ServerConfiguration() else {
             serverURL = nil
             showOperationStatus(
-                message: "Configure the server in local.xcconfig.",
+                message: "Enter a complete server address and check the configured port.",
                 state: "error"
             )
             return
@@ -175,11 +187,11 @@ class ViewController: PlatformViewController, WKNavigationDelegate, WKScriptMess
             showStatus(
                 lanPermission: "Not verified",
                 lanState: "warning",
-                serverAddress: "Not configured",
+                serverAddress: ServerConfiguration.savedAddress,
                 serverPort: "Not configured",
                 serverVersion: "Not configured",
                 serverState: "error",
-                message: "Configure the server in local.xcconfig.",
+                message: "Enter a complete server address and check the configured port.",
                 messageState: "error",
                 canOpen: false
             )

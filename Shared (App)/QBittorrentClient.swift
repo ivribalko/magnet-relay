@@ -5,19 +5,27 @@
 
 import Foundation
 
-/// Loads and validates the build-time qBittorrent endpoint.
+/// Combines the saved server address with the configured scheme and port.
 struct ServerConfiguration {
     let baseURL: URL
     let address: String
     let port: String
 
+    static var savedAddress: String {
+        get { UserDefaults.standard.string(forKey: "serverAddress") ?? "192.168.1." }
+        set { UserDefaults.standard.set(newValue, forKey: "serverAddress") }
+    }
+
     init?(bundle: Bundle = .main) {
+        let host = Self.savedAddress.trimmingCharacters(in: .whitespacesAndNewlines)
         guard
             let schemeValue = bundle.object(forInfoDictionaryKey: "MagnetRelayServerScheme") as? String,
-            let host = bundle.object(forInfoDictionaryKey: "MagnetRelayServerHost") as? String,
             let portValue = bundle.object(forInfoDictionaryKey: "MagnetRelayServerPort") as? String,
             ["http", "https"].contains(schemeValue.lowercased()),
             !host.isEmpty,
+            !host.hasSuffix("."),
+            !host.contains(where: { $0.isWhitespace }),
+            !host.contains(where: { "/:@?#".contains($0) }),
             let portNumber = Int(portValue),
             (1...65_535).contains(portNumber)
         else {
