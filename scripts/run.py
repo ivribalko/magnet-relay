@@ -98,7 +98,7 @@ def install(target, app):
     """Install on this Mac or a physical iOS device without launching."""
     kind, identifier = target["kind"], target["id"]
     if kind == "mac":
-        applications = Path.home() / "Applications"
+        applications = Path("/Applications")
         applications.mkdir(exist_ok=True)
         destination = applications / app.name
         # Stage the entire bundle so an older installation never retains stale files.
