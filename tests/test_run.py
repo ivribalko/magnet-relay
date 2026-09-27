@@ -26,6 +26,30 @@ class RunActionTests(unittest.TestCase):
         self.assertEqual({t["id"] for t in targets}, {"mac", "phone", "tablet"})
         self.assertEqual(targets[0]["name"], "Computer (This Mac)")
 
+    def test_platform_actions_limit_builds_and_install_choices(self):
+        targets = [{"kind": "mac", "name": "Computer"}, {"kind": "ios", "name": "Phone"},
+                   {"kind": "ios", "name": "Tablet"}]
+        for platform in ("mac", "ios"):
+            expected = [target for target in targets if target["kind"] == platform]
+            with tempfile.TemporaryDirectory() as temp, patch.object(run, "OUTPUT", Path(temp)), \
+                 patch.object(run, "discover", return_value=targets), \
+                 patch.object(run, "build", return_value=Path("app")) as build, \
+                 patch.object(run, "choose", side_effect=lambda choices: choices) as choose, \
+                 patch.object(run, "install") as install:
+                self.assertEqual(run.main(platform), 0)
+                build.assert_called_once_with(platform)
+                choose.assert_called_once_with(expected)
+                self.assertEqual(install.call_count, len(expected))
+
+    def test_no_ios_devices_skips_picker_and_install(self):
+        with tempfile.TemporaryDirectory() as temp, patch.object(run, "OUTPUT", Path(temp)), \
+             patch.object(run, "discover", return_value=[{"kind": "mac"}]), \
+             patch.object(run, "build", return_value=Path("app")), \
+             patch.object(run, "choose") as choose, patch.object(run, "install") as install:
+            self.assertEqual(run.main("ios"), 0)
+            choose.assert_not_called()
+            install.assert_not_called()
+
     def test_picker_all_cancel_and_duplicate_names(self):
         targets = [{"name": "Device", "id": "a"}, {"name": "Device", "id": "b"}]
         for output, expected in [(run.ALL, targets), ("", []), ("2. Device", targets[1:])]:

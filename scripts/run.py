@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build quiet Release apps, then install only on the selected named devices."""
 
+import argparse
 import fcntl
 import json
 import os
@@ -120,7 +121,8 @@ def install(target, app):
         raise RuntimeError(f"Unsupported installation target: {kind}")
 
 
-def main():
+def main(platform="all"):
+    kinds = ("mac", "ios") if platform == "all" else (platform,)
     os.umask(0o077)
     OUTPUT.mkdir(parents=True, exist_ok=True)
     # Prevent overlapping Run clicks from replacing products during installation.
@@ -129,9 +131,12 @@ def main():
             fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         except BlockingIOError:
             raise RuntimeError("A Run action is already active.")
-        products = {kind: build(kind) for kind in ("mac", "ios")}
+        products = {kind: build(kind) for kind in kinds}
         # Discover after building so newly connected devices appear in the picker.
-        targets = discover()
+        targets = [target for target in discover() if target["kind"] in kinds]
+        if not targets:
+            print("No available devices for the selected platform.")
+            return 0
         print("Release builds ready. Choose installation devices in the dialog.", flush=True)
         selected = choose(targets)
         if not selected:
@@ -152,7 +157,10 @@ def main():
 
 if __name__ == "__main__":
     try:
-        sys.exit(main())
+        parser = argparse.ArgumentParser(description=__doc__)
+        parser.add_argument("--platform", choices=("all", "mac", "ios"), default="all",
+                            help="platform to build and install (default: all)")
+        sys.exit(main(parser.parse_args().platform))
     except (RuntimeError, OSError, ValueError) as error:
         print(str(error), file=sys.stderr)
         sys.exit(1)

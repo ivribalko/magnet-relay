@@ -8,3 +8,13 @@ script = ""
 name = "Run"
 icon = "run"
 command = "python3 scripts/run.py"
+
+[[actions]]
+name = "Run Mac"
+icon = "run"
+command = "python3 scripts/run.py --platform mac"
+
+[[actions]]
+name = "Run iOS"
+icon = "run"
+command = "python3 scripts/run.py --platform ios"

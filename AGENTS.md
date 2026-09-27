@@ -9,6 +9,7 @@ Magnet Relay sends magnet links from Safari to qBittorrent on a local server.
 - Run the macOS or iOS target.
 - Use the native app to test the qBittorrent connection.
 - The Codex **Run** action builds Release apps for macOS and physical iOS devices, then displays a device picker with names, multiple selection, and **All available devices**.
+- **Run Mac** builds only macOS and offers this Mac for installation. **Run iOS** builds only iOS and offers available physical iOS devices, including an option to install to all of them.
 - Physical iOS devices must be paired and available to Xcode. USB and wireless devices are discovered again after the builds finish.
 - Build output stays in ignored `.derivedData/run/` logs; the terminal shows progress and bounded failure summaries.
 - Installation starts only after choosing **Install**. The Mac app is installed in `~/Applications`. Apps are not launched.
